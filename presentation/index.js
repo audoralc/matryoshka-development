@@ -454,6 +454,21 @@ export default class Presentation extends React.Component {
           </BodyThree>
         </Slide>
 
+        <Slide
+          transition={["fade"]}
+          bgColor="secondary"
+          textColor="primary"
+          align="flex-start">
+          <BodyThree>
+            <Heading>
+              ~Fancy~ 💅 Componentss
+            </Heading>
+            <Text>Higher-Order Components</Text>
+            <Text>Render-Props
+            </Text>
+          </BodyThree>
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="secondary" align="center center">
           <Heading size={6} textColor="primary" caps>
             One last thing...
