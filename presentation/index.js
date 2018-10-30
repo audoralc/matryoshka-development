@@ -29,6 +29,7 @@ import preloader from "spectacle/lib/utils/preloader";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import slide from "spectacle/lib/components/slide";
 
 // Require CSS
 require("normalize.css");
@@ -270,92 +271,6 @@ export default class Presentation extends React.Component {
         <Slide
           transition={["fade"]}
           bgColor="black"
-          textColor="primary"
-          align="flex-start">
-          <Heading size={6} textColor="white" margin="0 0 5% 0">
-            So basically...</Heading>
-
-          <Layout>
-            <Fill>
-              <Header></Header>
-            </Fill>
-          </Layout>
-
-          <Layout>
-            <Fill>
-              <BlockOne></BlockOne>
-            </Fill>
-            <Fill>
-              <BlockTwo></BlockTwo>
-            </Fill>
-          </Layout>
-
-          <Layout>
-            <Fill>
-              <Footer></Footer>
-            </Fill>
-          </Layout>
-
-        </Slide>
-
-        <Slide
-          transition={["fade"]}
-          bgColor="black"
-          textColor="primary"
-          align="center center">
-          <Footer>
-            <Layout>
-
-              <Appear><TinyCompOne/></Appear>
-              <Appear><TinyCompTwo/></Appear>
-              <Appear><TinyCompThree/></Appear>
-
-            </Layout>
-          </Footer>
-
-          <Text textColor="white" margin="2em 0 0 0">This is done with a props statement : this.props.children
-          </Text>
-
-        </Slide>
-
-        <Slide
-          transition={["fade"]}
-          bgColor="black"
-          textColor="black"
-          align="flex-start">
-          <BodyThree>
-            <Heading size={6} textColor="secondary" caps>Planning & Structure</Heading>
-            <Layout>
-              <Fill>
-                <Text textSize="28px" textAlign="justify" margin="1em">
-                  <S type="italic">
-                    The first thing you'll want to do is to draw boxes around every component (and
-                    subcomponent) in the mock and give them all names. If you're working with a
-                    designer, they may have already done this, so go talk to them!
-                  </S>
-                </Text>
-                <Text textSize="28px" textAlign="justify" margin="1em">
-                  <S type="italic">
-                    But how do you know what should be its own component? Just use the same
-                    techniques for deciding if you should create a new function or object.
-                  </S>
-                </Text>
-              </Fill>
-
-              <Fill>
-                <Image
-                  src={images
-                  .planning
-                  .replace("/", "")}
-                  margin="20%"/>
-              </Fill>
-            </Layout>
-          </BodyThree>
-        </Slide>
-
-        <Slide
-          transition={["fade"]}
-          bgColor="black"
           textColor="black"
           align="flex-start">
           <Image
@@ -363,6 +278,26 @@ export default class Presentation extends React.Component {
             .plan
             .replace("/", "")}
             height="120%"/>
+        </Slide>
+
+        <Slide>
+          <Heading>
+            Why components?
+          </Heading>
+          <Text>
+            React is great at what it does because it allows you to manipulate the DOM in
+            isolation
+          </Text>
+          <Text>
+            and then...</Text>
+          <Text>
+            actually manipulate the DOM</Text>
+        </Slide>
+
+        <Slide>
+          <Text>It also separates concerns to make it more performative:</Text>
+          <Text>
+            If you only need to re-render one component, you can just update that one.</Text>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="secondary" align="flex-start">
